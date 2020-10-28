@@ -1,0 +1,27 @@
+.footer {
+    background-color: #f2f1f1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    position: sticky;
+    bottom: 0px;
+    left: 0px;
+    height: 20vh;
+    width: 100vw;
+}
+
+.footer-list {
+    padding: 10px 20px;
+}
+
+.footer-list-header{
+    color: #808080;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.footer-list-item{
+    font-size: 12px;
+    line-height: 16px;
+    color: #868686;
+}

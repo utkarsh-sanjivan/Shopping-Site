@@ -1,0 +1,25 @@
+.cart-container {
+    width: 30%;
+    border: 1px solid #dedede;
+    padding: 20px 10px;
+    margin: 19px 1%;
+}
+
+.cart-header {
+    display: flex;
+    line-height: 40px;
+}
+
+.header-item {
+    width: 25%;
+    padding: 0 10px;
+}
+
+.cart-footer {
+    padding: 0 30px 0 10px;
+}
+
+.footer-item {
+    padding: 0 5px;
+    text-align: right;
+}

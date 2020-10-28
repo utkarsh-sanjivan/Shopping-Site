@@ -1,0 +1,25 @@
+.header {
+    padding: 20px;
+    background-color: #f18c6c;
+    display: flex;
+}
+
+.logo-header {
+    border: 1px solid #f4f4f4;
+    width: 10%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #f7c6b5;
+    font-weight: 200;
+}
+
+.title-header {
+    width: 90%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 32px;
+    color: #f7c6b5;
+    font-weight: 200;
+}
