@@ -39,7 +39,7 @@ export default function CatalogPage(props) {
             setCartItem([
                 ...cartItem,
                 tempCart,
-            ])
+            ]);
         }
     }
 
