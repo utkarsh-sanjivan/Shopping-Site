@@ -5,21 +5,34 @@
     margin: 19px 1%;
 }
 
+@media only screen and (max-width: 700px) {
+    .cart-container {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .cart-container {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
 .cart-header {
     display: flex;
     line-height: 40px;
+    justify-content: space-between;
 }
 
 .header-item {
     width: 25%;
-    padding: 0 10px;
+    text-align: center;
 }
 
 .cart-footer {
-    padding: 0 30px 0 10px;
+    
 }
 
 .footer-item {
-    padding: 0 5px;
     text-align: right;
 }

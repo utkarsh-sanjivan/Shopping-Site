@@ -1,10 +1,9 @@
 .grid-container {
-    width: 300px;
     padding: 10px;
-    /* border: 1px solid   #aaa; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .grid-container:hover {
@@ -14,7 +13,7 @@
 }
 
 .product-image {
-
+    width: 150px;
 }
 
 .product-text {
@@ -30,6 +29,7 @@
     text-align: justify;
     line-height: 20px;
     padding: 0 5px;
+    margin-bottom: 10px;
 }
 
 .product-info {
@@ -37,4 +37,23 @@
     text-align: justify;
     line-height: 20px;
     margin-bottom: 10px;
+}
+
+.product-button {
+    position: absolute;
+    left: 20%;
+    bottom: 10px;
+    width: 60%;
+    height: 32px;
+    line-height: 32px;
+    opacity: 0;
+    text-align: center;
+    background-color: #fff;
+    transition: opacity .5s ease;
+    border: 1px solid #676363;
+    cursor: pointer;
+}
+
+.grid-container:hover .product-button {
+  opacity: 1;
 }

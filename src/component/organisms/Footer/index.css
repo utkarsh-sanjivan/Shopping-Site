@@ -10,8 +10,21 @@
     width: 100vw;
 }
 
+
 .footer-list {
     padding: 10px 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .footer-list:nth-last-child(1), .footer-list:nth-last-child(2) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .footer-list:nth-last-child(3) {
+        display: none;
+    }
 }
 
 .footer-list-header{

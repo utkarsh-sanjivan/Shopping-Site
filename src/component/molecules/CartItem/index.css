@@ -1,19 +1,18 @@
-.product-container {
-    padding: 10px;
+.cart-product-container {
     display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
 
-.product-name-container {
+.cart-product-name-container {
     width: 25%;
-    display: flex;
-    flex-direction: column;
 }
 
-.product-image {
+.cart-product-image {
 
 }
 
-.product-name {
+.cart-product-name {
     font-size: 12px;
     padding-top: 5px;
 }
@@ -22,7 +21,6 @@
     width: 25%;
     line-height: 70px;
     text-align: center;
-    padding: 0 10px;
 }
 
 span {

@@ -3,10 +3,10 @@ import './index.css';
 
 export default function CartItem(props) {
     return (
-        <div className='product-container'>
-            <div className='product-name-container'>
-                <img className='product-image' src={props.image} width={50}/>
-                <div className='product-name'>{props.name}</div>
+        <div className='cart-product-container'>
+            <div className='cart-product-name-container'>
+                <img className='cart-product-image' src={props.image} width={50}/>
+                <div className='cart-product-name'>{props.name}</div>
             </div>
             <div className='cart-product-info'>₹{props.price}</div>
             <div className='cart-product-info'>
