@@ -6,12 +6,10 @@
 
 .logo-header {
     border: 1px solid #f4f4f4;
-    width: 10%;
+    width: 75px;
     height: 50px;
-    line-height: 50px;
-    text-align: center;
-    color: #f7c6b5;
-    font-weight: 200;
+    background-image: url('./cart-logo.png');
+    background-size: 100% 100%;
 }
 
 .title-header {
