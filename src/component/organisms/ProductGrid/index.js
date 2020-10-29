@@ -8,6 +8,7 @@ export default function ProductGrid(props) {
             {props.productList.map(product => 
                 <GridItem
                     {...product}
+                    key={product.id}
                     handleSelect={props.handleSelect}
                 />
             )}
