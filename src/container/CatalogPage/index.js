@@ -5,6 +5,7 @@ import './index.css';
 import axios from './../../utils/axios';
 
 export default function CatalogPage(props) {
+    const { setTotalProductCount, totalProductCount } = props;
     const [productList, setProductList] = useState([]);
     const [cartItem, setCartItem] = useState([]);
     const [totalAmount, setTotalAmount] = useState(0);
@@ -20,6 +21,7 @@ export default function CatalogPage(props) {
         let cartIndex = cartItem.findIndex(val => val.id===currentProductId);
         if (cartIndex>-1) {
             let tempCartItem = [ ...cartItem ];
+            setTotalProductCount(tempCartItem[cartIndex].quantity===0? totalProductCount :totalProductCount+1);
             setTotalAmount(tempCartItem[cartIndex].quantity===0? totalAmount: totalAmount+parseInt(tempCartItem[cartIndex].price));
             tempCartItem[cartIndex].cartQuantity+=tempCartItem[cartIndex].quantity===0? 0: 1;
             tempCartItem[cartIndex].quantity-=tempCartItem[cartIndex].quantity===0? 0 :1;
@@ -35,6 +37,7 @@ export default function CatalogPage(props) {
                 }
                 tempProduct.push(val);
             });
+            setTotalProductCount(totalProductCount+1);
             setProductList(tempProduct);
             setCartItem([
                 ...cartItem,
@@ -58,6 +61,7 @@ export default function CatalogPage(props) {
         let tempCartItem = cartItem.map(val => {
             if(val.id===currentProductId) {
                 if (val.quantity>0) setTotalAmount(totalAmount+parseInt(val.price));
+                setTotalProductCount(val.quantity===0? totalProductCount :totalProductCount+1);
                 return val.quantity===0?
                     val
                     : { ...val, quantity: val.quantity-1, cartQuantity: val.cartQuantity+1 }
@@ -104,6 +108,7 @@ export default function CatalogPage(props) {
             setProductList(tempProduct);
             setCartItem(tempCartItem);
         }
+        setTotalProductCount(totalProductCount-1);
     }
 
     return (

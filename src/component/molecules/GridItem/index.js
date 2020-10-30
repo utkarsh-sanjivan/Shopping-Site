@@ -9,7 +9,7 @@ export default function GridItem(props) {
             <div className='product-description'>{props.description}</div>
             <div className='product-info'><b>Price:</b> {props.price}</div>
             <div className='product-info'><b>Quality:</b> {props.quantity}</div>
-            <div  className='product-button' onClick={() => props.handleSelect(props.id)}>Add to Cart</div>
+            {parseInt(props.quantity)>0?<div  className='product-button' onClick={() => props.handleSelect(props.id)}>Add to Cart</div>: null}
         </div>
     );
 }
