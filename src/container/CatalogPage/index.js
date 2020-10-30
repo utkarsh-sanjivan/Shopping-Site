@@ -17,6 +17,12 @@ export default function CatalogPage(props) {
             })
     }, []);
 
+    /* 
+        Function to select a product from the product grid.
+        Takes in the the id for the product.
+        If the product doesnot exits then add the product to cart and reduce the count in the product grid.
+        If the product exists in the cart then increase the count in cart and decrease in the product grid.
+    */
     const handleSelect = currentProductId => {
         let cartIndex = cartItem.findIndex(val => val.id===currentProductId);
         if (cartIndex>-1) {
@@ -46,6 +52,10 @@ export default function CatalogPage(props) {
         }
     }
 
+    /*
+        Function to add product in the cart.
+        Takes in the the id for the product.        
+    */
     const addOne = currentProductId => {
         let tempProduct = [ ...productList ];
         tempProduct = tempProduct.map(product => {
@@ -72,6 +82,12 @@ export default function CatalogPage(props) {
         setCartItem(tempCartItem);
     }
 
+    /*
+        Function to remove product in the cart.
+        Takes in the the id for the product.
+        If the product count in cart is 1 then remove the product from the cart.
+        If the product count in the cart is more than 1 then just decrease the count by 1..
+    */
     const removeOne = (currentProductId, currentProductQuantity, currentProductIndex) => {
         let tempCartItem = [ ...cartItem ];
         if (parseInt(currentProductQuantity) === 1) {
@@ -111,6 +127,11 @@ export default function CatalogPage(props) {
         setTotalProductCount(totalProductCount-1);
     }
 
+    /*
+        Main body of the shopping catalog which contain two parts.
+        Product Grid -> Contains all the product in the for of grid that has the detail of the product as well as the 'Add to Cart' button.
+        Cart -> Cart component that contains all the selected products, their price and their count.
+    */
     return (
         <div className='body'>
             <ProductGrid 

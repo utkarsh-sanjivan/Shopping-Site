@@ -2,6 +2,11 @@ import React from 'react';
 import './index.css';
 
 export default function GridItem(props) {
+    /*
+        Grid Item Component that holds the products inside the product grid.
+        It has the body of the cart that holds the product list their indivisual price and quantity.
+        It also has a 'Add To Cart' button.
+    */
     return (
         <div className='grid-container'>
             <img className='product-image' src={props.image} alt={'Product'} width={300}/>
