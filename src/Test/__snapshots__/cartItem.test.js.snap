@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Cart Item Component Rendering Cart Item Component should render properly 1`] = `
+<div
+  className="cart-product-container"
+>
+  <div
+    className="cart-product-name-container"
+  >
+    <img
+      alt="Cart Product"
+      className="cart-product-image"
+      src=""
+      width={50}
+    />
+    <div
+      className="cart-product-name"
+    >
+      Product1
+    </div>
+  </div>
+  <div
+    className="cart-product-info"
+  >
+    ₹
+    100.00
+  </div>
+  <div
+    className="cart-product-info"
+  >
+    <span
+      onClick={[Function]}
+    >
+      -
+    </span>
+    10
+    <span
+      onClick={[Function]}
+    >
+      +
+    </span>
+  </div>
+  <div
+    className="cart-product-info"
+  >
+    ₹
+    1000
+  </div>
+</div>
+`;

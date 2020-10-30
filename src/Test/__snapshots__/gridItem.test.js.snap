@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Grid Item Component Rendering Grid Item Component should render properly 1`] = `
+<div
+  className="grid-container"
+>
+  <img
+    alt="Product"
+    className="product-image"
+    src=""
+    width={300}
+  />
+  <div
+    className="product-text"
+  >
+    Product1
+  </div>
+  <div
+    className="product-description"
+  >
+    lorem ipsum
+  </div>
+  <div
+    className="product-info"
+  >
+    <b>
+      Price:
+    </b>
+     
+    100.00
+  </div>
+  <div
+    className="product-info"
+  >
+    <b>
+      Quality:
+    </b>
+     
+    10
+  </div>
+  <div
+    className="product-button"
+    onClick={[Function]}
+  >
+    Add to Cart
+  </div>
+</div>
+`;

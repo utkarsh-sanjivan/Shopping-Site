@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Header Component Rendering Header Component should render properly 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="logo-header"
+  />
+  <div
+    className="title-header"
+  >
+    Shopping Site
+  </div>
+  <div
+    className="cart-item-count"
+  >
+    <i
+      className="fas fa-shopping-cart cart-icon"
+    />
+    <div
+      className="total-count"
+    >
+      10
+    </div>
+  </div>
+</div>
+`;
