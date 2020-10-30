@@ -2,6 +2,10 @@ import React from 'react';
 import './index.css';
 
 export default function Footer(props) {
+    /*
+        Footer Component of the page.
+        It has all the details of shopping site.
+    */
     return(
         <div className='footer'>
             <div className='footer-list'>

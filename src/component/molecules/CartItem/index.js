@@ -2,6 +2,11 @@ import React from 'react';
 import './index.css';
 
 export default function CartItem(props) {
+    /*
+        Cart Item Component that holds the products inside the cart component.
+        It has the body of the cart that holds the indivisual product their indivisual price, quantity and total price.
+        It also has total amount of the cart.
+    */
     return (
         <div className='cart-product-container'>
             <div className='cart-product-name-container'>

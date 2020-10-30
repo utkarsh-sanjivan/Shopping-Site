@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import CatalogPage from './container/CatalogPage/index';
-import Header from './component/organisms/Header/index';
-import Footer from './component/organisms/Footer/index';
+import MainLayout from "./mainLayout";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <CatalogPage />
-    <Footer />
+      <MainLayout />
   </React.StrictMode>,
   document.getElementById('root')
 );

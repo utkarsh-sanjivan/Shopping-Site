@@ -3,6 +3,11 @@ import './index.css';
 import CartItem from '../../molecules/CartItem';
 
 export default function Cart(props) {
+    /*
+        Cart Component that holds selected products.
+        It has the body of the cart that holds the product list their indivisual price, quantity and total price.
+        It also has a footer part that displays the total amount of the cart.
+    */
     return (
         <div className='cart-container'>
             <div className='cart-header'>
