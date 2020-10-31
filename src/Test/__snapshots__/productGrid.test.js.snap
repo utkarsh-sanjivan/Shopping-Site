@@ -5,3 +5,21 @@ exports[`Testing Product Grid Component Rendering Product Grid Component should 
   className="product-grid"
 />
 `;
+
+exports[`Testing Product Grid Component Rendering with 0 product Product Grid Component should render properly 1`] = `
+<div
+  className="product-grid"
+/>
+`;
+
+exports[`Testing Product Grid Component Rendering with no selected product Product Grid Component should render properly 1`] = `
+<div
+  className="product-grid"
+/>
+`;
+
+exports[`Testing Product Grid Component Rendering with selected product Product Grid Component should render properly 1`] = `
+<div
+  className="product-grid"
+/>
+`;

@@ -30,3 +30,65 @@ exports[`Testing Cart Component Rendering Cart Component should render properly 
   </div>
 </div>
 `;
+
+exports[`Testing Cart Component with Items Cart Component should render properly 1`] = `
+<div
+  className="cart-container"
+>
+  <div
+    className="cart-header"
+  >
+    <div
+      className="header-item"
+    >
+      Product
+    </div>
+    <div
+      className="header-item"
+    >
+      Price
+    </div>
+    <div
+      className="header-item"
+    >
+      Quantity
+    </div>
+    <div
+      className="header-item"
+    >
+      Total
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Testing Cart Component with No Items Cart Component should render properly 1`] = `
+<div
+  className="cart-container"
+>
+  <div
+    className="cart-header"
+  >
+    <div
+      className="header-item"
+    >
+      Product
+    </div>
+    <div
+      className="header-item"
+    >
+      Price
+    </div>
+    <div
+      className="header-item"
+    >
+      Quantity
+    </div>
+    <div
+      className="header-item"
+    >
+      Total
+    </div>
+  </div>
+</div>
+`;
