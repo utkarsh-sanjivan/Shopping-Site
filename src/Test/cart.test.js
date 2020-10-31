@@ -1,7 +1,7 @@
 import React from 'react';
 import { create } from "react-test-renderer";
 import Cart from '../component/organisms/Cart/index';
-import CartItem from '../component/Molecules/CartItem/index';
+import CartItem from '../component/molecules/CartItem/index';
 
 let wrapper;
 let root;
