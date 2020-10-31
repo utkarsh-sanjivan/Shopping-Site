@@ -18,22 +18,27 @@ beforeEach(() => {
   root=wrapper.root;
 });
 
+// Unit Test Cases for testing Cart Component with No items in the cart.
 describe('Testing Cart Component with No Items', () => {
+  // Test for matching the snapshot when no products are available in the cart.
   it('Cart Component should render properly', () => {
-    expect(wrapper.toJSON()).toMatchSnapshot();;
+    expect(wrapper.toJSON()).toMatchSnapshot();
   });
 
+  // Test for numbers of div DOM element when no products are available in the cart.
   it('should atleast 6 div component', () => {
-    expect(root.findAllByType('div').length===6);
+    expect(root.findAllByType('div').length).toEqual(6);
   });
 
+  // Test for numbers of Cart Item Component when no products are available in the cart.
   it('should have atleast no Cart Item Component', () => {
-    expect(root.findAllByType(CartItem).length===0);
+    expect(root.findAllByType(CartItem).length).toEqual(0);
   });
 });
 
+// Unit Test Cases for testing Cart Component with items in the cart.
 describe('Testing Cart Component with Items', () => {
-  wrapper = create(renderComponent({ 
+  let wrapperWithSelectedProduct = create(renderComponent({ 
     ...baseProps,
     cartItem: [{
       "id": 1,
@@ -44,17 +49,20 @@ describe('Testing Cart Component with Items', () => {
       "image": "http://truth-events.com/wp-content/uploads/2019/09/dummy.jpg"
     },]
   }));
-  root=wrapper.root;
+  let rootWithSelectedProduct=wrapperWithSelectedProduct.root;
 
+    // Test for matching the snapshot when products are available in the cart.
   it('Cart Component should render properly', () => {
-    expect(wrapper.toJSON()).toMatchSnapshot();;
+    expect(wrapperWithSelectedProduct.toJSON()).toMatchSnapshot();
   });
 
-  it('should atleast 8 div component', () => {
-    expect(root.findAllByType('div').length===8);
+  // Test for numbers of div DOM element when products are available in the cart.
+  it('should atleast 6 div component', () => {
+    expect(rootWithSelectedProduct.findAllByType('div').length>5).toBe(true);
   });
 
+  // Test for numbers of Cart Item Component when products are available in the cart.
   it('should have atleast no Cart Item Component', () => {
-    expect(root.findAllByType(CartItem).length===0);
+    expect(rootWithSelectedProduct.findAllByType(CartItem).length).toEqual(1);
   });
 });

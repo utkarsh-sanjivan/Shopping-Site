@@ -24,15 +24,26 @@ export default function CatalogPage(props) {
         If the product exists in the cart then increase the count in cart and decrease in the product grid.
     */
     const handleSelect = currentProductId => {
+        // Increasing the total count of the products in the cart
+        setTotalProductCount(totalProductCount+1);
         let cartIndex = cartItem.findIndex(val => val.id===currentProductId);
         if (cartIndex>-1) {
+            /* 
+                If the selected item is in the cart then
+                -> increaing the quantity of the product in the cart
+                -> decreasing the quantity of the product in the grid
+            */
             let tempCartItem = [ ...cartItem ];
-            setTotalProductCount(tempCartItem[cartIndex].quantity===0? totalProductCount :totalProductCount+1);
             setTotalAmount(tempCartItem[cartIndex].quantity===0? totalAmount: totalAmount+parseInt(tempCartItem[cartIndex].price));
             tempCartItem[cartIndex].cartQuantity+=tempCartItem[cartIndex].quantity===0? 0: 1;
             tempCartItem[cartIndex].quantity-=tempCartItem[cartIndex].quantity===0? 0 :1;
             setCartItem(tempCartItem);
         } else {
+            /* 
+                If the selected item is not in the cart then
+                -> decreasing the quantity of the product in the cart
+                -> increaing the quantity of the product in the grid
+            */
             let tempProduct = [];
             let tempCart = {};
             productList.forEach(val => {
@@ -43,7 +54,6 @@ export default function CatalogPage(props) {
                 }
                 tempProduct.push(val);
             });
-            setTotalProductCount(totalProductCount+1);
             setProductList(tempProduct);
             setCartItem([
                 ...cartItem,
@@ -58,6 +68,11 @@ export default function CatalogPage(props) {
     */
     const addOne = currentProductId => {
         let tempProduct = [ ...productList ];
+        /*
+            If the products is available then 
+            -> increaing the quantity of the product in the cart
+            -> decreasing the quantity of the product in the grid
+        */
         tempProduct = tempProduct.map(product => {
             if (product.id === currentProductId) {
                 return { 
@@ -91,6 +106,11 @@ export default function CatalogPage(props) {
     const removeOne = (currentProductId, currentProductQuantity, currentProductIndex) => {
         let tempCartItem = [ ...cartItem ];
         if (parseInt(currentProductQuantity) === 1) {
+            /*
+                If the products count is one in teh cart then 
+                ->  remove the product from the cart
+                -> increaing the quantity of the product in the grid
+            */
             setProductList(productList.map(product => {
                 if (product.id===currentProductId) {
                     return { ...product, quantity: product.quantity+1, cartQuantity: product.cartQuantity-1 }
@@ -101,6 +121,11 @@ export default function CatalogPage(props) {
             tempCartItem.splice(currentProductIndex, 1);
             setCartItem(tempCartItem);
         } else {
+            /*
+                If the products count is one in teh cart then 
+                ->  decreasing the quantity of the product in the cart
+                -> increaing the quantity of the product in the grid
+            */
             let tempProduct = [ ...productList ];
             tempProduct = tempProduct.map(product => {
                 if (product.id === currentProductId) {

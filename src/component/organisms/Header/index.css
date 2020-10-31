@@ -25,27 +25,29 @@
 
 .cart-item-count {
     position: relative;
+    min-width: 30px;
 }
 
 .cart-icon {
     position: absolute;
-    top: 11px;
+    top: 5px;
     left: 0px;
-    font-size: 24px;
+    font-size: 22px;
     color: #fff;
 }
 
 .total-count {
     position: absolute;
-    top: 0px;
-    left: 7px;
-    font-size: 17px;
-    font-weight: 400;
+    top: -5px;
+    left: 25px;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 600;
     background-color: #ee5e5f;
     color: #fff;
-    width: 17px;
-    height: 19px;
+    width: 16px;
+    height: 16px;
     text-align: center;
-    border: 1px solid #fff;
-    border-radius: 10px;
+    border: 2px solid #fff;
+    border-radius: 9px;
 }

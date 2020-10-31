@@ -20,30 +20,37 @@ beforeEach(() => {
   root=wrapper.root;
 });
 
+// Unit Test Cases for testing Grid Item Component with 0 quantity.
 describe('Testing Grid Item Component with 0 quantity', () => {
-  it('Grid Item Component should render properly', () => {
-    expect(wrapper.toJSON()).toMatchSnapshot();
-  });
-
-    it('should atleast 5 div component', () => {
-        expect(root.findAllByType('div').length===5);
+    // Test for matching the snapshot when there is 0 quantity.
+    it('Grid Item Component should render properly', () => {
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 
+    // Test for numbers of div DOM element in the Grid Item component when there is 0 quantity.
+    it('should atleast 5 div component', () => {
+        expect(root.findAllByType('div').length).toEqual(5);
+    });
+
+    // Test for numbers of img DOM element in the Grid Item component when there is 0 quantity.
     it('should atleast 1 img component', () => {
-        expect(root.findAllByType('img').length===1);
+        expect(root.findAllByType('img').length).toEqual(1);
     });
 });
 
 describe('Testing Grid Item Component with 4 quantity', () => {
+    // Test for matching the snapshot when there is 4 quantity.
   it('Grid Item Component should render properly', () => {
     expect(wrapper.toJSON()).toMatchSnapshot();
   });
 
-    it('should atleast 6 div component', () => {
-        expect(root.findAllByType('div').length===6);
+    // Test for numbers of div DOM element in the Grid Item component when there is 4 quantity.
+    it('should atleast 5 div component', () => {
+        expect(root.findAllByType('div').length).toEqual(5);
     });
 
+    // Test for numbers of div DOM element in the Grid Item component when there is 4 quantity.
     it('should atleast 1 img component', () => {
-        expect(root.findAllByType('img').length===1);
+        expect(root.findAllByType('img').length).toEqual(1);
     });
 });

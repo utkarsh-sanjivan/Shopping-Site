@@ -14,12 +14,15 @@ beforeEach(() => {
   root=wrapper.root;
 });
 
+// Unit Test Cases for testing Footer Component.
 describe('Testing Footer Component Rendering', () => {
+    // Test for matching the snapshot for Footer Component.
     it('Footer Component should render properly', () => {
         expect(wrapper.toJSON()).toMatchSnapshot();
     });
 
+    // Test for numbers of div DOM element in the Footer component.
     it('should atleast 35 div component', () => {
-        expect(root.findAllByType('div').length===35);
+        expect(root.findAllByType('div').length).toEqual(35);
     });
 });

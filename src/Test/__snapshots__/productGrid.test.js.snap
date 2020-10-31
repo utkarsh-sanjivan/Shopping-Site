@@ -1,17 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing Product Grid Component Rendering Product Grid Component should render properly 1`] = `
-<div
-  className="product-grid"
-/>
-`;
-
-exports[`Testing Product Grid Component Rendering with 0 product Product Grid Component should render properly 1`] = `
-<div
-  className="product-grid"
-/>
-`;
-
 exports[`Testing Product Grid Component Rendering with no selected product Product Grid Component should render properly 1`] = `
 <div
   className="product-grid"
@@ -21,5 +9,43 @@ exports[`Testing Product Grid Component Rendering with no selected product Produ
 exports[`Testing Product Grid Component Rendering with selected product Product Grid Component should render properly 1`] = `
 <div
   className="product-grid"
-/>
+>
+  <div
+    className="grid-container"
+  >
+    <img
+      alt="Product"
+      className="product-image"
+      src="http://truth-events.com/wp-content/uploads/2019/09/dummy.jpg"
+      width={300}
+    />
+    <div
+      className="product-text"
+    >
+      Product 1
+    </div>
+    <div
+      className="product-description"
+    >
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+    </div>
+    <div
+      className="product-info"
+    >
+      <b>
+        Price:
+      </b>
+       
+      100.00
+    </div>
+    <div
+      className="product-info"
+    >
+      <b>
+        Quality:
+      </b>
+       
+    </div>
+  </div>
+</div>
 `;
