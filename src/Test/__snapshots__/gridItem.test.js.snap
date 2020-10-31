@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing Grid Item Component Rendering Grid Item Component should render properly 1`] = `
+exports[`Testing Grid Item Component with 0 quantity Grid Item Component should render properly 1`] = `
 <div
   className="grid-container"
 >
@@ -36,13 +36,48 @@ exports[`Testing Grid Item Component Rendering Grid Item Component should render
       Quality:
     </b>
      
-    10
+    0
+  </div>
+</div>
+`;
+
+exports[`Testing Grid Item Component with 4 quantity Grid Item Component should render properly 1`] = `
+<div
+  className="grid-container"
+>
+  <img
+    alt="Product"
+    className="product-image"
+    src=""
+    width={300}
+  />
+  <div
+    className="product-text"
+  >
+    Product1
   </div>
   <div
-    className="product-button"
-    onClick={[Function]}
+    className="product-description"
   >
-    Add to Cart
+    lorem ipsum
+  </div>
+  <div
+    className="product-info"
+  >
+    <b>
+      Price:
+    </b>
+     
+    100.00
+  </div>
+  <div
+    className="product-info"
+  >
+    <b>
+      Quality:
+    </b>
+     
+    0
   </div>
 </div>
 `;

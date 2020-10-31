@@ -2,7 +2,13 @@
     padding: 20px;
     background-color: #2874f0;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 8vh;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
 }
 
 .logo-header {
@@ -14,7 +20,6 @@
 }
 
 .title-header {
-    width: 90%;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -25,27 +30,26 @@
 
 .cart-item-count {
     position: relative;
+    min-width: 30px;
 }
 
 .cart-icon {
-    position: absolute;
-    top: 11px;
-    left: 0px;
-    font-size: 24px;
+    font-size: 22px;
     color: #fff;
 }
 
 .total-count {
     position: absolute;
-    top: 0px;
-    left: 7px;
-    font-size: 17px;
-    font-weight: 400;
+    top: -10px;
+    left: 20px;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 600;
     background-color: #ee5e5f;
     color: #fff;
-    width: 17px;
-    height: 19px;
+    width: 16px;
+    height: 16px;
     text-align: center;
-    border: 1px solid #fff;
-    border-radius: 10px;
+    border: 2px solid #fff;
+    border-radius: 9px;
 }

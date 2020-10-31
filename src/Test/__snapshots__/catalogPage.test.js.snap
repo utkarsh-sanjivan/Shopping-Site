@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Catalog Page with 0 product count Catalog Page should render properly 1`] = `
+<div
+  className="body"
+>
+  <div
+    className="product-grid"
+  />
+  <div
+    className="cart-container"
+  >
+    <div
+      className="cart-header"
+    >
+      <div
+        className="header-item"
+      >
+        Product
+      </div>
+      <div
+        className="header-item"
+      >
+        Price
+      </div>
+      <div
+        className="header-item"
+      >
+        Quantity
+      </div>
+      <div
+        className="header-item"
+      >
+        Total
+      </div>
+    </div>
+  </div>
+</div>
+`;
